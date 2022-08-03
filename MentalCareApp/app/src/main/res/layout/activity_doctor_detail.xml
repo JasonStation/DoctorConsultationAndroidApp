@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DoctorDetail"
+    >
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/doctorImage"
+                android:layout_width="168dp"
+                android:layout_height="295dp"
+                android:layout_below="@id/quickDetail"
+                android:layout_alignParentStart="true"
+
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="122dp"
+                android:layout_marginTop="-2dp"
+                android:layout_marginEnd="122dp"
+                app:srcCompat="@drawable/docgirl" />
+
+            <TextView
+                android:id="@+id/doctorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="9dp"
+                android:gravity="center"
+                android:text="Dr Susan"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/quickDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/doctorName"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="31dp"
+                android:layout_marginEnd="52dp"
+                android:gravity="center"
+                android:text="Doctor"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/docDescription"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/doctorImage"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="-2dp"
+                android:layout_marginEnd="31dp"
+                android:gravity="center"
+                android:text="TextView"
+                app:layout_constraintTop_toBottomOf="@+id/doctorImage" />
+
+            <EditText
+                android:id="@+id/docAppointment"
+                android:hint="Enter detail you want to give to the doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/doctorImage"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="69dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:background="@color/gray"
+                android:inputType="textMultiLine"
+                app:layout_constraintTop_toBottomOf="@+id/docDescription" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/requestButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/docDescription"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="122dp"
+                android:layout_marginRight="30dp"
+                android:text="Book Appointment"
+                app:cornerRadius="30sp"
+                app:layout_constraintTop_toBottomOf="@+id/docAppointment"
+                tools:layout_editor_absoluteX="16dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

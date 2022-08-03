@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mentalcareapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission-sdk-23 android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <permission
+        android:name="com.example.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.permission.MAPS_RECEIVE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MentalCareApp">
+        <activity
+            android:parentActivityName=".ShoppingCartList"
+            android:name=".InfoForm"
+            android:label="Confirm Order Information"
+            android:exported="true" />
+        <activity
+            android:name=".ShoppingCartList"
+            android:exported="true"
+            android:label="Medicine cart"
+            android:parentActivityName=".MedicineList" />
+        <activity
+            android:name=".MedicineList"
+            android:exported="true"
+            android:label="Medicines"
+            android:parentActivityName=".Homepage" />
+        <activity
+            android:name=".MapView"
+            android:exported="true"
+            android:label="View hospital"
+            android:parentActivityName=".HospitalList" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCbEYI_JzasAuDqEGCL8lwq9o-n7U7INfg" />
+
+        <activity
+            android:name=".AboutUs"
+            android:exported="true"
+            android:label="About MentalCare"
+            android:parentActivityName=".Homepage" />
+        <activity
+            android:name=".AppointmentList"
+            android:exported="true"
+            android:label="Your appointments"
+            android:parentActivityName=".Homepage" />
+        <activity
+            android:name=".HospitalDetail"
+            android:exported="true"
+            android:label="View hospital"
+            android:parentActivityName=".HospitalList" />
+        <activity
+            android:name=".HospitalList"
+            android:exported="true"
+            android:label="Hospitals"
+            android:parentActivityName=".Homepage" />
+        <activity
+            android:name=".DoctorDetail"
+            android:exported="true"
+            android:label="View doctor"
+            android:parentActivityName=".DocList" />
+        <activity
+            android:name=".Homepage"
+            android:exported="true"
+            android:label="Telemedicine" />
+        <activity
+            android:name=".DocList"
+            android:exported="true"
+            android:label="Doctors"
+            android:parentActivityName=".Homepage" />
+        <activity
+            android:name=".Signup"
+            android:exported="true"
+            android:label="Telemedicine"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".LoginScreen"
+            android:exported="true"
+            android:label="Login to Telemedicine"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="Telemedicine">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
